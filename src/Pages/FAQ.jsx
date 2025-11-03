@@ -56,7 +56,7 @@ const FaqSection = () => {
           If you have anything else you want to ask,{" "}
           <a
             href="#contact"
-            className="text-blue-600 hover:underline font-medium"
+            className="text-pink-600 hover:underline font-medium"
           >
             reach out to us
           </a>

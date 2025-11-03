@@ -2,7 +2,7 @@ import { Twitter, Youtube } from "lucide-react";
 
 const Footer = () => {
   return (
-  <footer className="bg-white border-t border-gray-200 py-10 min-h-40">
+  <footer className="bg-pink-50 border-t border-pink-600 py-10 min-h-40">
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
         {/* Left Section */}
         <div className="flex flex-col items-start space-y-4">
