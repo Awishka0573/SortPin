@@ -1,70 +1,104 @@
 import React from "react";
+import { Mail } from "lucide-react";
 
 const AboutUs = () => {
   return (
-    <section className="bg-white py-16 px-4">
-      <div className="max-w-5xl mx-auto text-gray-900 space-y-12">
-        {/* About Us Heading */}
-        <div className="text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">About Us</h1>
-          <p className="text-lg md:text-xl text-gray-700">
-            Sortpin is a dynamic and innovative browser extension designed to enhance your Pinterest experience. 
-            Our mission is to provide you with powerful tools that unlock the hidden potential of Pinterest, making it easier 
-            and more efficient for you to discover, organize, and engage with your favorite pins.
+    <section className="bg-gradient-to-b from-white via-gray-50 to-pink-50 py-16 px-6 md:px-12">
+      <div className="max-w-6xl mx-auto text-gray-800">
+        {/* Top Heading */}
+        <div className="text-center space-y-4 mb-16">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">
+            About <span className="text-pink-600">SortPin</span>
+          </h1>
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            SortPin is a dynamic and innovative browser extension designed to
+            enhance your Pinterest experience — helping you discover, organize,
+            and engage with your favorite pins more efficiently.
           </p>
         </div>
 
-        {/* Vision */}
-        <div>
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4">Our Vision</h2>
-          <p className="text-gray-700 text-lg leading-relaxed">
-            We believe that Pinterest is a platform filled with inspiration, creativity, and valuable content. Our vision is 
-            to empower Pinterest users to maximize their experience by providing them with the tools they need to unlock the 
-            full potential of the platform.
+        {/* Vision + What We Offer */}
+        <div className="grid md:grid-cols-2 gap-12 items-start">
+          {/* Vision */}
+          <div className="bg-white rounded-2xl shadow-sm p-8 hover:shadow-md transition">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
+              🌟 Our Vision
+            </h2>
+            <p className="text-gray-700 leading-relaxed">
+              We believe Pinterest is full of inspiration and creativity.
+              Our vision is to empower users to unlock the platform’s full
+              potential by offering tools that transform browsing into a
+              powerful, insightful experience.
+            </p>
+          </div>
+
+          {/* What We Offer */}
+          <div className="bg-white rounded-2xl shadow-sm p-8 hover:shadow-md transition">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
+              🚀 What We Offer
+            </h2>
+            <ul className="space-y-3 text-gray-700 leading-relaxed">
+              <li>
+                <span className="font-semibold text-gray-900">
+                  Hidden Pin Data:
+                </span>{" "}
+                Gain insights into repins, comments, and creation dates.
+              </li>
+              <li>
+                <span className="font-semibold text-gray-900">
+                  Pin Discovery:
+                </span>{" "}
+                Effortlessly discover and organize viral pins.
+              </li>
+              <li>
+                <span className="font-semibold text-gray-900">
+                  Ad Filtering:
+                </span>{" "}
+                Enjoy distraction-free browsing by hiding promoted content.
+              </li>
+              <li>
+                <span className="font-semibold text-gray-900">
+                  Effortless Downloads:
+                </span>{" "}
+                Save images and videos instantly for inspiration or reuse.
+              </li>
+              <li>
+                <span className="font-semibold text-gray-900">
+                  Discovering Boards:
+                </span>{" "}
+                Find boards to join and pin to — no approval needed.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Extra paragraph */}
+        <div className="text-center mt-16 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+            At SortPin, we’re dedicated to continuously improving your Pinterest
+            experience — helping you unlock creativity, save time, and stay
+            inspired.
           </p>
         </div>
 
-        {/* What We Offer */}
-        <div>
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4">What We Offer</h2>
-          <ul className="list-disc list-inside text-gray-700 space-y-2 text-lg">
-            <li>
-              <span className="font-semibold">Hidden Pin Data:</span> With Sortpin, you can uncover hidden pin data, 
-              allowing you to gain insights into repins, comments, and the creation date of pins.
-            </li>
-            <li>
-              <span className="font-semibold">Pin Discovery:</span> Discover the best-performing viral pins effortlessly 
-              and keep them organized for future reference.
-            </li>
-            <li>
-              <span className="font-semibold">Ad Filtering:</span> Sortpin simplifies your Pinterest experience by 
-              filtering out ads, allowing you to focus on what matters most.
-            </li>
-            <li>
-              <span className="font-semibold">Effortless Downloads:</span> Easily download images and videos, making it 
-              convenient for you to save, share, or use them as inspiration.
-            </li>
-            <li>
-              <span className="font-semibold">Discovering Boards:</span> Find boards to join and pin to without the need 
-              for approval, streamlining your Pinterest participation.
-            </li>
-          </ul>
-          <p className="text-gray-700 text-lg mt-4">
-            At Sortpin, we are dedicated to providing you with a comprehensive and insightful Pinterest experience. We 
-            are committed to continuously improving and expanding our features to meet the evolving needs of our users.
+        {/* Contact Section */}
+        <div className="bg-white mt-16 p-8 rounded-2xl shadow-sm hover:shadow-md transition text-center">
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+            💌 Contact Us
+          </h2>
+          <p className="text-gray-700 text-lg max-w-2xl mx-auto mb-4">
+            Have questions, feedback, or ideas? We’d love to hear from you.
           </p>
-        </div>
-
-        {/* Contact Us */}
-        <div>
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4">Contact Us</h2>
-          <p className="text-gray-700 text-lg">
-            If you have questions, feedback, or inquiries about Sortpin, please don't hesitate to reach out to us at{" "}
-            <a href="mailto:hey@sortpin.com" className="text-pink-600 font-semibold underline">
-              hey@sortpin.com
-            </a>.
+          <a
+            href="mailto:hey@sortpin.com"
+            className="inline-flex items-center gap-2 text-pink-600 font-medium bg-pink-50 px-5 py-2.5 rounded-full hover:bg-pink-100 transition"
+          >
+            <Mail className="w-5 h-5" />
+            hey@sortpin.com
+          </a>
+          <p className="text-gray-600 mt-4">
+            Thank you for choosing SortPin to enhance your Pinterest journey!
           </p>
-          <p className="text-gray-700 text-lg mt-2">Thank you for choosing Sortpin to enhance your Pinterest journey!</p>
         </div>
       </div>
     </section>

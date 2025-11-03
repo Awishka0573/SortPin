@@ -34,12 +34,12 @@ const plans = [
 
 const Pricing = () => {
   return (
-    <section id="pricing" className="py-20 bg-gray-50">
-      <div className="text-center mb-16 px-6">
-        <h2 className="text-4xl font-bold text-gray-900 mb-4">
+    <section id="pricing" className="py-12 md:py-20 bg-gray-50">
+      <div className="text-center mb-12 md:mb-16 px-4 md:px-6">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Transparent Pricing
         </h2>
-        <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+        <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto">
           Unlock all the features of SortPin.com Extension and{" "}
           <span className="text-pink-600 font-semibold">
             support an indie dev.
@@ -51,7 +51,7 @@ const Pricing = () => {
         </p>
       </div>
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 px-4 md:px-6">
         {plans.map((plan, index) => (
           <div
             key={index}
@@ -120,12 +120,12 @@ const Pricing = () => {
         ))}
       </div>
 
-      <p className="text-center text-gray-500 text-sm mt-10">
+      <p className="text-center text-gray-500 text-sm mt-8 md:mt-10 px-4">
         Trusted by over <span className="font-semibold">40,000+</span> Pinterest
         lovers ⭐⭐⭐⭐⭐
       </p>
-      <div className="text-center m-10">
-        <p className="mt-4 p-10  rounded-2xl text-gray-600 max-w-2xl mx-auto px-6 bg-pink-100">
+      <div className="text-center mx-4 md:mx-10 mt-6 md:mt-10">
+        <p className="mt-4 p-6 md:p-10 rounded-2xl text-gray-600 max-w-2xl mx-auto bg-pink-100 text-sm md:text-base">
           Risk-free! 14-day Money Back Guarantee If you're not happy with the
           product, we will refund. No hassles, no question asked! Send us an
           email at hey@sortpin.com

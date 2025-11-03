@@ -70,14 +70,7 @@ function App() {
             <Footer />
           </div>
         } />
-        <Route path="/guide" element={
-          <>
-            <Navbar />
-            <div className="pt-16">
-              <UserGuied />
-            </div>
-          </>
-        } />
+        <Route path="/guide" element={<UserGuied />} />
       </Routes>
     </Router>
   );

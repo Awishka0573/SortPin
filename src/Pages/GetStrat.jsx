@@ -2,13 +2,13 @@ import React from 'react';
 
 const GetStart = () => {
   return (
-    <section className="min-h-40 py-10 flex items-center justify-center px-4 bg-pink-700">
+    <section className="min-h-40 py-8 md:py-10 flex items-center justify-center px-4 bg-pink-700">
       <div className="text-center max-w-2xl mx-auto">
-        <h1 className="text-3xl md:text-5xl text-white font-bold mb-6">
+        <h1 className="text-2xl md:text-4xl lg:text-5xl text-white font-bold mb-4 md:mb-6">
           Get started today
         </h1>
         
-        <p className="text-xl md:text-1xl text-white mb-8 leading-relaxed">
+        <p className="text-base md:text-lg lg:text-xl text-white mb-6 md:mb-8 leading-relaxed">
           It's time to take control of your Pins.
           Download the extension and<br />
           start using it today.

@@ -47,16 +47,16 @@ const videos = [
 
 const ExpertsTalk = () => {
   return (
-    <section className="py-16 px-6 md:px-20 bg-white text-center">
-      <h2 className="text-3xl md:text-4xl font-bold text-pink-600 mb-12">
+    <section className="py-12 md:py-16 px-4 md:px-6 lg:px-20 bg-white text-center">
+      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-pink-600 mb-8 md:mb-12">
         What the experts talk about us
       </h2>
 
-      <div className="flex flex-wrap justify-center gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
         {videos.map((video) => (
           <div
             key={video.id}
-            className="group w-[90%] sm:w-[300px] md:w-[320px] lg:w-[340px]"
+            className="group w-full"
           >
             <a
               href={video.url}
@@ -64,17 +64,17 @@ const ExpertsTalk = () => {
               rel="noopener noreferrer"
               className="block rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300"
             >
-              <div className="relative">
+              <div className="relative aspect-video">
                 <img
                   src={video.img}
                   alt={video.title}
-                  className="w-full rounded-2xl object-cover"
+                  className="w-full h-full rounded-2xl object-cover"
                 />
                 {/* Play icon overlay */}
                 <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="w-16 h-16 text-white"
+                    className="w-12 h-12 md:w-16 md:h-16 text-white"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -84,7 +84,7 @@ const ExpertsTalk = () => {
               </div>
             </a>
 
-            <h3 className="mt-4 text-base font-semibold text-gray-800 leading-snug">
+            <h3 className="mt-4 text-sm md:text-base font-semibold text-gray-800 leading-snug px-2">
               {video.title}
             </h3>
           </div>

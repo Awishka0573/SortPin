@@ -124,58 +124,104 @@ const sidebarItems = [
 const UserGuied = () => {
   const [selectedItem, setSelectedItem] = useState(sidebarItems[0].items[0]);
 
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   return (
-    <div className="flex h-screen bg-gray-50">
-      {/* Sidebar */}
-      <aside className="w-72 bg-white border-r border-gray-200 flex flex-col">
-        {/* Scrollable navigation */}
-        <div className="flex-1 overflow-y-auto p-4 space-y-6 pb-24">
-          {sidebarItems.map((section, idx) => (
-            <div key={idx}>
-              <p className="text-xs font-semibold text-gray-500 uppercase mb-2">
-                {section.section}
-              </p>
-              <ul className="space-y-2">
-                {section.items.map((item, i) => (
-                  <li
-                    key={i}
-                    onClick={() => setSelectedItem(item)}
-                    className={`flex items-center gap-2 px-2 py-1.5 rounded-md cursor-pointer transition ${
-                      selectedItem.label === item.label
-                        ? "bg-pink-100 text-pink-700 font-medium"
-                        : "text-gray-700 hover:bg-gray-100"
-                    }`}
-                  >
-                    <span>{item.icon}</span>
-                    <span className="text-sm">{item.label}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+    <div className="flex flex-col min-h-screen bg-gray-50">
+      {/* Navbar */}
+      <header className="flex items-center justify-between px-4 md:px-6 py-3 bg-white border-b border-gray-200 shadow-sm">
+        <div className="flex items-center gap-2 md:ml-20">
+          <button
+            onClick={() => setSidebarOpen(!sidebarOpen)}
+            className="md:hidden mr-2 text-gray-700 hover:text-pink-600"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+          <img
+            src="https://www.sortpin.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.974adfe7.png&w=2048&q=75"
+            alt="Logo"
+            className="w-10 h-10 md:w-12 md:h-12 object-contain rounded-sm"
+          />
+          <span className="text-lg md:text-xl font-semibold text-gray-800">
+            SortPin
+          </span>
         </div>
-
-        {/* Fixed Footer */}
-        <div className="border-t text-sm p-4 bg-white flex items-center justify-center sticky bottom-0 shadow-inner">
-          <span className="text-pink-600 font-medium">⚡ Powered by GitBook</span>
+        <div className="hidden sm:flex items-center bg-gray-100 rounded-md px-3 py-1.5 w-48 md:w-64 md:mr-10">
+          <input
+            type="text"
+            placeholder="Search..."
+            className="bg-transparent outline-none text-sm w-full text-gray-700"
+          />
         </div>
-      </aside>
+      </header>
 
-      {/* Main Content */}
-      <main className="flex-1 overflow-y-auto p-10">
-        <h1 className="text-3xl font-bold mb-6 flex items-center gap-2">
-          <span>{selectedItem.icon}</span>
-          <span>{selectedItem.label}</span>
-        </h1>
+      {/* Body */}
+      <div className="flex flex-1 overflow-hidden relative">
+        {/* Sidebar Overlay for mobile */}
+        {sidebarOpen && (
+          <div
+            className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
+            onClick={() => setSidebarOpen(false)}
+          ></div>
+        )}
 
-        <div className="bg-gray-100 p-6 rounded-lg text-gray-700 shadow-sm leading-relaxed">
-          {typeof selectedItem.content === "string" ? (
-            <p>{selectedItem.content}</p>
-          ) : (
-            selectedItem.content
-          )}
-        </div>
-      </main>
+        {/* Sidebar */}
+        <aside className={`${
+          sidebarOpen ? 'translate-x-0' : '-translate-x-full'
+        } md:translate-x-0 fixed md:relative z-50 w-72 bg-white border-r border-gray-200 flex flex-col h-full transition-transform duration-300 ease-in-out`}>
+          <div className="flex-1 overflow-y-auto p-4 space-y-6 pb-24">
+            {sidebarItems.map((section, idx) => (
+              <div key={idx}>
+                <p className="text-xs font-semibold text-gray-500 uppercase mb-2">
+                  {section.section}
+                </p>
+                <ul className="space-y-2">
+                  {section.items.map((item, i) => (
+                    <li
+                      key={i}
+                      onClick={() => {
+                        setSelectedItem(item);
+                        setSidebarOpen(false);
+                      }}
+                      className={`flex items-center gap-2 px-2 py-1.5 rounded-md cursor-pointer transition ${
+                        selectedItem.label === item.label
+                          ? "bg-pink-100 text-pink-700 font-medium"
+                          : "text-gray-700 hover:bg-gray-100"
+                      }`}
+                    >
+                      <span>{item.icon}</span>
+                      <span className="text-sm">{item.label}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          {/* Fixed Footer */}
+          <div className="border-t text-sm p-4 bg-white flex items-center justify-center sticky bottom-0 shadow-inner">
+            <span className="text-pink-600 font-medium">⚡ Powered by GitBook</span>
+          </div>
+        </aside>
+
+        {/* Main Content */}
+        <main className="flex-1 overflow-y-auto p-4 md:p-10">
+          <h1 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-2">
+            <span>{selectedItem.icon}</span>
+            <span className="wrap-break-word">{selectedItem.label}</span>
+          </h1>
+
+          <div className="bg-gray-100 p-4 md:p-6 rounded-lg text-gray-700 shadow-sm leading-relaxed">
+            {typeof selectedItem.content === "string" ? (
+              <p>{selectedItem.content}</p>
+            ) : (
+              selectedItem.content
+            )}
+          </div>
+        </main>
+      </div>
     </div>
   );
 };

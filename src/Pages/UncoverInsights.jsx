@@ -55,12 +55,12 @@ const features = [
 
 const FeaturesSection = ({ showButtons = false }) => {
   return (
-    <section id="features" className="bg-white py-20 px-6 md:px-16 lg:px-32">
+    <section id="features" className="bg-white py-12 md:py-16 lg:py-20 px-4 md:px-6 lg:px-16 xl:px-32">
       <div>
-        <h2 className="text-4xl font-bold text-gray-900 text-center">Features and Benefits</h2><br />
-        <p className="text-1xl text-center text-gray-900 mb-10">SortPin unlocks hidden pin data, streamlines discovery, filters ads, and eases downloads, enhancing your Pinterest experience.</p>
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center">Features and Benefits</h2><br />
+        <p className="text-base md:text-lg lg:text-xl text-center text-gray-900 mb-8 md:mb-10 px-4">SortPin unlocks hidden pin data, streamlines discovery, filters ads, and eases downloads, enhancing your Pinterest experience.</p>
       </div>
-      <div className="max-w-7xl mx-auto space-y-24">
+      <div className="max-w-7xl mx-auto space-y-16 md:space-y-20 lg:space-y-24">
         {features.map((feature, index) => (
           <div
             key={feature.id}
@@ -69,21 +69,21 @@ const FeaturesSection = ({ showButtons = false }) => {
             } items-center gap-16`}
           >
             {/* Left Text Section */}
-            <div className="flex-1 space-y-6 text-center lg:text-left">
+            <div className="flex-1 space-y-4 md:space-y-6 text-center lg:text-left">
               <div className="inline-flex items-center justify-center bg-pink-600 text-white p-3 rounded-xl">
                 {feature.icon}
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
                 {feature.title}
               </h2>
-              <p className="text-gray-600 text-lg leading-relaxed">
+              <p className="text-gray-600 text-base md:text-lg leading-relaxed">
                 {feature.description}
               </p>
             </div>
 
             {/* Right Video Section */}
-            <div className="flex-1 flex justify-center">
-              <div className="rounded-3xl overflow-hidden shadow-2xl hover:scale-[1.02] transition-transform duration-500 ease-out max-w-lg">
+            <div className="flex-1 flex justify-center px-4 md:px-0">
+              <div className="rounded-3xl overflow-hidden shadow-2xl hover:scale-[1.02] transition-transform duration-500 ease-out max-w-lg w-full">
                 <video
                   src={feature.video}
                   autoPlay
@@ -99,16 +99,16 @@ const FeaturesSection = ({ showButtons = false }) => {
 
         {/* Bottom Navigation Buttons - Only show when showButtons is true */}
         {showButtons && (
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-6 pt-12">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 md:gap-6 pt-8 md:pt-12 px-4">
             <Link
               to="/experts"
-              className="px-8 py-4 bg-pink-600 text-white font-semibold rounded-xl hover:bg-pink-700 transition-colors duration-300 shadow-lg hover:shadow-xl"
+              className="w-full sm:w-auto px-6 md:px-8 py-3 md:py-4 bg-pink-600 text-white font-semibold rounded-xl hover:bg-pink-700 transition-colors duration-300 shadow-lg hover:shadow-xl text-center"
             >
               View Expert Talks
             </Link>
             <Link
               to="/pricing"
-              className="px-8 py-4 bg-gray-900 text-white font-semibold rounded-xl hover:bg-gray-800 transition-colors duration-300 shadow-lg hover:shadow-xl"
+              className="w-full sm:w-auto px-6 md:px-8 py-3 md:py-4 bg-gray-900 text-white font-semibold rounded-xl hover:bg-gray-800 transition-colors duration-300 shadow-lg hover:shadow-xl text-center"
             >
               View Pricing Plans
             </Link>

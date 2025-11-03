@@ -55,13 +55,13 @@ const PinterestDownloader = () => {
   ];
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center bg-gray-50 py-12 px-4">
-      <div className="bg-white shadow-xl rounded-2xl w-full max-w-3xl p-8 text-center border border-gray-100">
+    <section className="min-h-screen flex flex-col items-center justify-center bg-gray-50 py-8 md:py-12 px-4">
+      <div className="bg-white shadow-xl rounded-2xl w-full max-w-3xl p-6 md:p-8 text-center border border-gray-100">
         {/* Heading */}
-        <h1 className="text-sm font-semibold text-pink-500 mb-2 tracking-wider">
+        <h1 className="text-xs md:text-sm font-semibold text-pink-500 mb-2 tracking-wider">
           FREE ONLINE TOOL
         </h1>
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
+        <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800 mb-2">
           Pinterest Downloader for Videos, Images, and Stories
         </h2>
         <p className="text-gray-600 mb-6 text-sm md:text-base">
@@ -158,11 +158,11 @@ const PinterestDownloader = () => {
       </div>
 
       {/* FAQ Section */}
-      <div className="w-full max-w-3xl mt-12">
-        <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
+      <div className="w-full max-w-3xl mt-8 md:mt-12">
+        <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-6 text-center">
           Frequently Asked Questions
         </h2>
-        <div className="  rounded-xl divide-y divide-gray-200">
+        <div className="rounded-xl divide-y divide-gray-200">
           {faqs.map((item, index) => (
             <div key={index} className="p-5">
               <button

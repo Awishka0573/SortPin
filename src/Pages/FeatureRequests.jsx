@@ -49,23 +49,23 @@ const FeatureRequests = () => {
             </Link>
             
             {/* Navigation Links */}
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-2 md:space-x-4">
               <a 
                 href="#" 
-                className="text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200"
+                className="hidden md:inline-block text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200"
               >
                 Roadmap
               </a>
               <a 
                 href="#" 
-                className="text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200"
+                className="hidden md:inline-block text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200"
               >
                 Feedback
               </a>
-              <button className="px-4 py-2 text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200">
+              <button className="px-3 md:px-4 py-2 text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200 text-sm md:text-base">
                 Login
               </button>
-              <button className="px-4 py-2 bg-pink-600 text-white rounded-md hover:bg-pink-700 transition-colors duration-200">
+              <button className="px-3 md:px-4 py-2 bg-pink-600 text-white rounded-md hover:bg-pink-700 transition-colors duration-200 text-sm md:text-base">
                 Sign Up
               </button>
             </div>
@@ -75,10 +75,10 @@ const FeatureRequests = () => {
 
       {/* Main Content */}
       <section className="flex justify-center py-10 px-4">
-        <div className="w-full max-w-6xl bg-white shadow-sm rounded-xl p-6 flex flex-col md:flex-row gap-6 border border-gray-200">
+        <div className="w-full max-w-6xl bg-white shadow-sm rounded-xl p-4 md:p-6 flex flex-col md:flex-row gap-4 md:gap-6 border border-gray-200">
 
           {/* Left Sidebar */}
-          <aside className="md:w-1/4 w-full bg-gray-50 p-4 rounded-lg border border-gray-100">
+          <aside className="hidden md:block md:w-1/4 w-full bg-gray-50 p-4 rounded-lg border border-gray-100">
             <h2 className="text-gray-800 font-semibold text-lg mb-3">BOARDS</h2>
             <div className="text-pink-600 font-medium bg-pink-50 px-4 py-2 rounded-md">
               Feature Requests
@@ -88,7 +88,7 @@ const FeatureRequests = () => {
 
           {/* Main Section */}
           <main className="md:w-2/4 w-full">
-            <h1 className="text-2xl font-bold text-gray-800 mb-4">Feature Requests</h1>
+            <h1 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">Feature Requests</h1>
 
             {/* Post Form */}
             <div className="border border-gray-200 rounded-xl p-4 mb-6">
@@ -125,7 +125,7 @@ const FeatureRequests = () => {
           </main>
 
           {/* Right Side Scrollable Posts */}
-          <aside className="md:w-1/4 w-full border border-gray-100 rounded-lg p-4 overflow-y-auto max-h-[75vh] bg-gray-50">
+          <aside className="hidden md:block md:w-1/4 w-full border border-gray-100 rounded-lg p-4 overflow-y-auto max-h-[75vh] bg-gray-50">
             {posts.map((post, index) => (
               <div
                 key={index}
