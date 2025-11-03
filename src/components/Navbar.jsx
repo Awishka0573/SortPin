@@ -6,11 +6,11 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
-    { name: "About Us", href: "#about" },
+    { name: "About Us", href: "/about" },
     { name: "Features", href: "/features" },
     { name: "Pricing", href: "/pricing" },
     { name: "Pinterest Downloader", href: "/downloader" },
-    { name: "User Guide", href: "#guide" },
+    { name: "User Guide", href: "/guide" },
     { name: "Feature Requests", href: "/feature-requests" },
   ];
 

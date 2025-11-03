@@ -8,6 +8,8 @@ import UncoverInsights from './Pages/UncoverInsights.jsx';
 import PinterestDownloader from './Pages/PinterestDownloader.jsx';
 import ExpertsTalk from './Pages/ExpertsTalk.jsx';
 import FeatureRequests from './Pages/FeatureRequests.jsx';
+import AboutUs from './Pages/AboutUs.jsx';
+import UserGuied from './Pages/UserGuied.jsx';
 import './App.css';
 
 function App() {
@@ -58,6 +60,23 @@ function App() {
             </div>
             <Footer />
           </div>
+        } />
+        <Route path="/about" element={
+          <div className="min-h-screen flex flex-col">
+            <Navbar />
+            <div className="grow pt-20">
+              <AboutUs />
+            </div>
+            <Footer />
+          </div>
+        } />
+        <Route path="/guide" element={
+          <>
+            <Navbar />
+            <div className="pt-16">
+              <UserGuied />
+            </div>
+          </>
         } />
       </Routes>
     </Router>
