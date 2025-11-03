@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaChrome, FaFirefoxBrowser } from 'react-icons/fa';
 
 const HeroSection = () => {
   return (
@@ -39,17 +40,17 @@ const HeroSection = () => {
           </div>
 
           {/* Free CTA */}
-          <div className="mb-8">
-            <p className="text-xl font-bold mb-4">Free. No card required.</p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
-              <button className="bg-green-500 text-white font-semibold px-6 py-3 rounded-md hover:bg-green-600 transition-colors">
-                Add to Chrome - It's Free
-              </button>
-              <button className="bg-green-500 text-white font-semibold px-6 py-3 rounded-md hover:bg-green-600 transition-colors">
-                Install for Firefox - It's Free
-              </button>
-            </div>
-          </div>
+      <div className="mb-8">
+  <p className="text-xl font-bold mb-4">Free. No card required.</p>
+  <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+    <button className="bg-pink-500 text-white font-semibold px-6 py-3 rounded-md hover:bg-pink-600 transition-colors flex items-center gap-x-2">
+      Add to Chrome - It's Free <FaChrome size={20} />
+    </button>
+    <button className="bg-pink-500 text-white font-semibold px-6 py-3 rounded-md hover:bg-pink-600 transition-colors flex items-center gap-x-2">
+      Install for Firefox - It's Free <FaFirefoxBrowser size={20} />
+    </button>
+  </div>
+</div>
 
           {/* Trust Badge */}
           <div className="pt-6">

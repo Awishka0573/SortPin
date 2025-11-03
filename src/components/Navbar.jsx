@@ -24,12 +24,13 @@ const Navbar = () => {
             alt="Logo"
             className="h-12 w-12 object-contain rounded-md"
           />
+           <span className="text-2xl font-bold text-pink-600">SortPin</span>
         </Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8">
-          {links.map((link) => (
-            link.href.startsWith('/') ? (
+          {links.map((link) =>
+            link.href.startsWith("/") ? (
               <Link
                 key={link.name}
                 to={link.href}
@@ -46,7 +47,7 @@ const Navbar = () => {
                 {link.name}
               </a>
             )
-          ))}
+          )}
         </div>
 
         {/* Mobile Menu Button */}
@@ -61,8 +62,8 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-3">
-          {links.map((link) => (
-            link.href.startsWith('/') ? (
+          {links.map((link) =>
+            link.href.startsWith("/") ? (
               <Link
                 key={link.name}
                 to={link.href}
@@ -81,7 +82,7 @@ const Navbar = () => {
                 {link.name}
               </a>
             )
-          ))}
+          )}
         </div>
       )}
     </nav>
