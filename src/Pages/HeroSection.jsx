@@ -4,7 +4,7 @@ import { FaChrome, FaFirefoxBrowser } from 'react-icons/fa';
 const HeroSection = () => {
   return (
     <>
-      <section className="min-h-screen flex items-center justify-center bg-white px-4 py-12 mt-10">
+      <section className="flex items-center justify-center bg-white px-4 py-16 md:py-20 mt-16 md:mt-20">
         <div className="text-center text-gray-900 max-w-4xl mx-auto">
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
@@ -62,12 +62,14 @@ const HeroSection = () => {
       </section>
 
       {/* Example extra section */}
-      <section className="min-h-screen w-full flex items-center justify-center px-4 py-8">
-        <img
-          src="/image.png"
-          alt=""
-          className="max-w-6xl w-full h-auto rounded-2xl border-4 border-gray-300 object-contain"
-        />
+      <section className="w-full flex items-center justify-center px-4 md:px-6 lg:px-8 py-6 md:py-12 lg:py-16">
+        <div className="max-w-6xl w-full">
+          <img
+            src="/image.png"
+            alt="SortPin Demo"
+            className="w-full h-auto rounded-lg md:rounded-2xl border-2 md:border-4 border-gray-300 object-contain shadow-lg"
+          />
+        </div>
       </section>
     </>
   );
