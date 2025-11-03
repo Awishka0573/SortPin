@@ -11,7 +11,7 @@ const Navbar = () => {
     { name: "Pricing", href: "/pricing" },
     { name: "Pinterest Downloader", href: "/downloader" },
     { name: "User Guide", href: "#guide" },
-    { name: "Feature Requests", href: "#requests" },
+    { name: "Feature Requests", href: "/feature-requests" },
   ];
 
   return (

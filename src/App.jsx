@@ -7,6 +7,7 @@ import Pricing from './Pages/Pricing.jsx';
 import UncoverInsights from './Pages/UncoverInsights.jsx';
 import PinterestDownloader from './Pages/PinterestDownloader.jsx';
 import ExpertsTalk from './Pages/ExpertsTalk.jsx';
+import FeatureRequests from './Pages/FeatureRequests.jsx';
 import './App.css';
 
 function App() {
@@ -46,6 +47,14 @@ function App() {
             <Navbar />
             <div className="grow pt-20">
               <ExpertsTalk />
+            </div>
+            <Footer />
+          </div>
+        } />
+        <Route path="/feature-requests" element={
+          <div className="min-h-screen flex flex-col">
+            <div className="grow">
+              <FeatureRequests />
             </div>
             <Footer />
           </div>
